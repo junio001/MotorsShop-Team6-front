@@ -1,10 +1,11 @@
-import Input from "./Components/Input";
+import GlobalStyle from "./globalStyles";
 
 function App() {
-  return <div className="App">
-
-    <Input type="text" label="email" placeholder="Ex: xxx@mail.com"></Input>
-  </div>;
+  return (
+    <div className="App">
+      <GlobalStyle />
+    </div>
+  );
 }
 
 export default App;
