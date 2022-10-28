@@ -39,15 +39,15 @@ export const designButton = (design: string, disable?: boolean) => {
         borderColor: "#2125290",
         textColor: "#212529",
       };
-    case "outineLight":
+    case "outlineLight":
       return {
         backgroundColor: "",
-        borderColor: "#2125290",
+        borderColor: "#FDFDFD",
         textColor: "#FFFFFF",
         hoverBackgroundColor: "#FFFFFF",
         hoverColor: "#212529",
       };
-    case "outine1":
+    case "outline1":
       return {
         backgroundColor: "#FFFFFF",
         borderColor: "#0B0D0D",
