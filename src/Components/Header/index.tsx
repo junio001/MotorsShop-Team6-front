@@ -1,9 +1,10 @@
-import { Container } from "./styles";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import BurguerMenu from "../BurguerMenu";
 import { ProfileMenu } from "../ProfileMenu";
+import { Container } from "./styles";
+
 interface HeaderProps {
   name: string;
 }
@@ -12,7 +13,7 @@ export const Header = ({ name }: HeaderProps) => {
   const [openBurgerMenu, setOpenBurguerMenu] = useState(false);
   const [openProfileMenu, setOpenProfileMenu] = useState(false);
   const [isLogged, setIsLogged] = useState(true);
-  const initialLetters = name.split(" ");
+  const initialLetters = name.split("");
 
   const openProfileFunction = () => {
     if (openProfileMenu) {
@@ -23,9 +24,8 @@ export const Header = ({ name }: HeaderProps) => {
 
   return (
     <Container>
-      <h1>
-        Motors <span>shop</span>
-      </h1>
+      <img src={require("./logo.png")} alt="MotorsShop"/>
+
       <div className="mobileNav">
         {openBurgerMenu ? (
           <button onClick={() => setOpenBurguerMenu(false)}>
@@ -37,6 +37,7 @@ export const Header = ({ name }: HeaderProps) => {
           </button>
         )}
       </div>
+
       <div className="DesktopNav">
         <div className="menuFeaturesDesktop">
           <p>Carros</p>
@@ -65,6 +66,7 @@ export const Header = ({ name }: HeaderProps) => {
           )}
         </div>
       </div>
+      
       {openProfileMenu && (
         <ProfileMenu setOpenProfileMenu={setOpenProfileMenu} />
       )}
