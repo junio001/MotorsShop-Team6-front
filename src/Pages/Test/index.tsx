@@ -1,10 +1,11 @@
 import { Banner } from '../../Components/Banner'
+import { Button } from '../../Components/Button'
 import { Footer } from '../../Components/Footer'
 import { Header } from '../../Components/Header'
+import { Modal } from '../../Components/Modal'
 import { ProductCard } from '../../Components/ProductCard'
 import { ProductCardAuction } from '../../Components/ProductCardAuction'
 import { Container } from './styles'
-
 export const Test = () => {
   return (
     <Container>
@@ -34,6 +35,13 @@ export const Test = () => {
             capa: require("./carro.png"),
             usuario: "Anunciante"
         } }/>
+        <p>&nbsp;</p>
+
+
+        <Modal trigger={<Button className={""} design={"outlineLight"}>Abrir Modal</Button>} title={"Título da Modal"}>
+            <>Teste</>
+        </Modal>
+        
         <p>&nbsp;</p>
 
         <Footer/>
